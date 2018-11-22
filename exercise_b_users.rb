@@ -69,9 +69,9 @@ users["Avril"][:lottery_numbers].select(&:even?)
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 users["Erik"][:lottery_numbers].push(7)
 # 8. Change Erik's hometown to Edinburgh
-users["Erik"].replace({ :home_town => "Edinburgh" })
+users["Erik"].merge!({ :home_town => "Edinburgh" })
 # 9. Add a pet dog to Erik called "Fluffy"
-# users["Erik"][:pets].push({:name => "Fluffy", :species => "dog"})
+users["Erik"][:pets].push({:name => "Fluffy", :species => "dog"})
 # 10. Add another person to the users hash
 users.merge!("Jamie" => {
   :twitter => " ",
@@ -85,4 +85,4 @@ users.merge!("Jamie" => {
   ]
   })
 
-p users
+# p users
